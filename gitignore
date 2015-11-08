@@ -1,0 +1,5 @@
+.gitignore
+*.orig
+*.user
+*.kdev4
+patch*
