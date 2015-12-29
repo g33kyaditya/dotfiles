@@ -1,2 +1,2 @@
 # dotfiles
-My most important dot files. Most needed in cases when I need to set up my environment.
+For when the world comes to an end
