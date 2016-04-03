@@ -9,17 +9,21 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-alias pmc='plasmashell -ap org.kde.plasma.mediacenter --windowed & disown'
+alias pmc='plasmashell -ap org.kde.plasma.mediacenter --windowed'
 alias nce='kde5-nm-connection-editor'
-
+alias Data='cd /run/media/g33kyaditya/Data'
+alias Entertainment='cd /run/media/g33kyaditya/Entertainment'
+alias topcoder='javaws.itweb http://www.topcoder.com/contest/arena/ContestAppletProd.jnlp && disown'
 # ccache
 export CCACHE_DIR="/home/g33kyaditya/.ccache"
-export CC="ccache gcc"
-export CXX="ccache g++"
 export PATH="/usr/lib/ccache:$PATH"
 
 pu_login() { 
    curl -d "user=$1&password=$2" --dump-header headers https://securelogin.arubanetworks.com/cgi-bin/login?cmd=login 
+}
+
+restart_plasmashell() {
+    kbuildsycoca5 && kquitapp5 plasmashell && kstart5 plasmashell
 }
 
 uiet_login() { 
