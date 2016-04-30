@@ -14,10 +14,11 @@ alias nce='kde5-nm-connection-editor'
 alias Data='cd /run/media/g33kyaditya/Data'
 alias Entertainment='cd /run/media/g33kyaditya/Entertainment'
 alias topcoder='javaws.itweb http://www.topcoder.com/contest/arena/ContestAppletProd.jnlp && disown'
+alias android-studio='/home/g33kyaditya/android-studio/bin/studio.sh'
 # ccache
 export CCACHE_DIR="/home/g33kyaditya/.ccache"
 export PATH="/usr/lib/ccache:$PATH"
-
+export PATH="$PATH:/home/g33kyaditya/depot_tools"
 pu_login() { 
    curl -d "user=$1&password=$2" --dump-header headers https://securelogin.arubanetworks.com/cgi-bin/login?cmd=login 
 }
@@ -28,6 +29,10 @@ restart_plasmashell() {
 
 uiet_login() { 
    curl -d "username=$1&password=$2&producttype=0&mode=191&a=1442488510916" --dump-header headers http://192.168.50.10:8090/login.xml 
+}
+
+mirror(){
+    git push --mirror git@github.com:g33kyaditya/KDE-Now.git
 }
 
 if [ -f ~/.agent.env ] ; then
